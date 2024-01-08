@@ -26,7 +26,10 @@ Users should be able to:
 ### Screenshot
 
 ![Preview](./design/desktop-design.jpg)
+![Preview](./design/desktop-thank-you-state.jpg)
 ![Preview](./design/mobile-design.jpg)
+![Preview](./design/mobile-thank-you-state.jpg)
+![Preview](./design/active-states.jpg)
 
 ### Links
 
