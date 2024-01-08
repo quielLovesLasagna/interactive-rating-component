@@ -1,0 +1,155 @@
+@use "./abstracts" as abs;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: abs.$cl-very-dark-blue;
+	font-size: abs.$fs-normal;
+	font-family: abs.$ff-overpass;
+}
+
+.container {
+	position: relative;
+}
+
+.card {
+	max-width: 43rem;
+	background: linear-gradient(
+		to bottom,
+		abs.$cl-dark-blue-2,
+		abs.$cl-dark-blue-3
+	);
+	border-radius: 2rem;
+
+	&__title {
+		color: abs.$cl-white;
+		margin-bottom: 1rem;
+	}
+
+	&__text {
+		color: abs.$cl-light-grey;
+		margin-bottom: 3rem;
+		line-height: 1.6;
+	}
+
+	&-1 {
+		padding: 3rem;
+
+		&__star-box {
+			background-color: abs.$cl-dark-blue;
+			width: 4rem;
+			aspect-ratio: 1;
+			display: grid;
+			place-items: center;
+			border-radius: 50%;
+			margin-bottom: 3rem;
+		}
+	}
+
+	&__ratings {
+		list-style: none;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__rating {
+		cursor: pointer;
+		border: none;
+		width: 5rem;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		font-size: inherit;
+		font-family: inherit;
+		display: grid;
+		place-items: center;
+		background-color: abs.$cl-dark-blue;
+		color: abs.$cl-light-grey;
+		margin-bottom: 3rem;
+		@include abs.transitionAll;
+
+		&:hover {
+			background-color: abs.$cl-medium-grey;
+			color: abs.$cl-white;
+		}
+
+		&:active,
+		&:focus {
+			background-color: abs.$cl-orange;
+			color: abs.$cl-white;
+		}
+	}
+
+	&__button {
+		cursor: pointer;
+		width: 100%;
+		border: none;
+		background-color: abs.$cl-orange;
+		color: abs.$cl-white;
+		text-transform: uppercase;
+		font-weight: abs.$fw-large;
+		letter-spacing: 2px;
+		padding: 1.5rem 2rem;
+		border-radius: 5rem;
+		font-size: inherit;
+		font-family: inherit;
+		@include abs.transitionAll;
+
+		&:hover {
+			background-color: abs.$cl-white;
+			color: abs.$cl-orange;
+		}
+	}
+
+	&-2 {
+		padding: 5rem 3.5rem 0 3.5rem;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		@include abs.transitionAll;
+	}
+
+	&__ty-img {
+		margin-bottom: 3rem;
+	}
+
+	&__rating-summary {
+		padding: 0.8rem 2rem;
+		color: abs.$cl-orange;
+		background-color: abs.$cl-dark-blue;
+		border-radius: 5rem;
+		margin-bottom: 3rem;
+	}
+
+	&__title-2 {
+		margin-bottom: 1.5rem;
+	}
+}
+
+.show {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}
