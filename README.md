@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: []()
-- Live Site URL: []()
+- Solution URL: [https://github.com/quielLovesLasagna/interactive-rating-component](https://github.com/quielLovesLasagna/interactive-rating-component)
+- Live Site URL: [https://quiel-interactive-rating-component.netlify.app/](https://quiel-interactive-rating-component.netlify.app/)
 
 ## My process
 
